@@ -31,7 +31,7 @@ gem "cssbundling-rails"
 gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
-# gem "redis", "~> 4.0"
+gem "redis", "~> 4.0"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -43,17 +43,34 @@ gem "jbuilder"
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", require: false
-
-# Use Sass to process CSS
-# gem "sassc-rails"
-
+gem 'aasm'
+gem 'active_model_serializers'
+gem 'activerecord-import'
+gem 'audited'
+gem 'bootsnap', require: false
+gem 'carrierwave'
+gem 'jwt'
+gem 'kaminari'
+gem 'mini_magick'
+gem 'pundit'
+gem 'rest-client'
+gem 'scenic'
+gem 'scenic-mysql_adapter'
+gem 'sidekiq', '~> 5.2.9'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'debase'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
+  gem 'rubocop', require: false
+  gem 'rubocop-performance', '~> 1.0'
+  gem 'rubocop-rspec'
+  gem 'ruby-debug-ide'
 end
 
 group :development do
