@@ -1,0 +1,28 @@
+<h2 class="text-center mb-4">Log in</h2>
+
+<div class="card mx-auto shadow mb-lg-5" style="max-width: 350px;">
+  <div class="card-body">
+    <%= form_for(resource, as: resource_name, url: user_session_path,
+                 html: { class: 'needs-validation' }) do |f| %>
+      <%= render "users/shared/error_messages", resource: resource %>
+
+      <div class="mb-3">
+        <%= f.label :student_id, 'Student ID', class: "form-label" %>
+        <%= f.text_field :student_id, autofocus: true, autocomplete: "student_id", class: "form-control", placeholder: "Enter your Student ID" %>
+      </div>
+
+      <div class="mb-3">
+        <%= f.label :password, nil, class: "form-label" %>
+        <%= f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder: "Enter your Password" %>
+      </div>
+
+      <div class="d-grid">
+        <%= f.submit "Log in", class: "btn btn-primary btn-block" %>
+      </div>
+    <% end %>
+
+    <div class="text-center mt-3">
+      <%= render "users/shared/links" %>
+    </div>
+  </div>
+</div>

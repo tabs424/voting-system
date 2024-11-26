@@ -1,0 +1,11 @@
+<h1>Admin Homepage</h1>
+
+<%- if admin_user_signed_in? %>
+  <p>Welcome admin <%= current_admin_user.name %></p>
+
+  <%= button_to 'Sign Out', destroy_admin_user_session_path, method: :delete,  class: 'btn btn-success' %>
+<% else %>
+  <%= link_to 'Sign In', new_admin_user_session_path, class: 'btn btn-primary' %>
+  <%= link_to 'Sign Up', new_admin_user_registration_path, class: 'btn btn-success' %>
+<% end %>
+

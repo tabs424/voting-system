@@ -49,6 +49,8 @@ gem 'activerecord-import'
 gem 'audited'
 gem 'bootsnap', require: false
 gem 'carrierwave'
+gem 'devise'
+gem 'dotenv-rails'
 gem 'jwt'
 gem 'kaminari'
 gem 'mini_magick'

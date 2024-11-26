@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "admin", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "admin", "data-turbo-track": "reload", type: "module" %>
+  </head>
+
+  <body class="d-flex flex-column min-vh-100">
+    <% if current_admin_user %>
+      <%= render 'layouts/admin/navbar' %>
+      <div class="container-fluid flex-grow-1">
+        <div class="row">
+          <%= render 'layouts/admin/sidebar' %>
+          <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <p class="notice"><%= notice %></p>
+            <p class="alert"><%= alert %></p>
+            <%= yield %>
+          </main>
+        </div>
+      </div>
+    <% else %>
+      <div class="flex-grow-1">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= yield %>
+      </div>
+    <% end %>
+    <%= render 'layouts/admin/footer' %>
+  </body>
+
+</html>
