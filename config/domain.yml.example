@@ -1,0 +1,12 @@
+development:
+  users:
+    - voting.com
+  admins:
+    - admin.com
+    - officer.com
+test:
+  users:
+    - voting.com
+  admins:
+    - admin.com
+    - officer.com

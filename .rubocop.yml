@@ -75,7 +75,7 @@ Layout/HashAlignment:
 
 Layout/LineLength:
   Max: 100
-  IgnoredPatterns:
+  AllowedPatterns:
     - !ruby/regexp /\A +(it|describe|context|shared_examples|include_examples|it_behaves_like) ["']/
 
 Lint/InterpolationCheck:
@@ -105,7 +105,18 @@ Metrics/ModuleLength:
   Exclude:
     - 'spec/**/*.rb'
 
-RSpec/FilePath:
+# Obsolete Configuration
+#RSpec/FilePath:
+#  Exclude:
+#    - spec/rubocop/formatter/junit_formatter_spec.rb
+
+RSpec/SpecFilePathFormat:
+  Enabled: true
+  Exclude:
+    - spec/rubocop/formatter/junit_formatter_spec.rb
+
+RSpec/SpecFilePathSuffix:
+  Enabled: true
   Exclude:
     - spec/rubocop/formatter/junit_formatter_spec.rb
 
