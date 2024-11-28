@@ -35,6 +35,6 @@ module App
     config.generators.system_tests = nil
 
     # sidekiq
-    config.eager_load_paths += %W( #{config.root}/app/jobs )
+    config.eager_load_paths += %W[#{config.root}/app/jobs]
   end
 end

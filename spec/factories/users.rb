@@ -1,5 +1,4 @@
-FactoryBot.define do
+FactoryBot.define {
   factory :user do
-    
   end
-end
+}

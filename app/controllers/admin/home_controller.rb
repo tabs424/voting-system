@@ -1,2 +1,4 @@
-class Admin::HomeController < AdminController
+module Admin
+  class HomeController < AdminController
+  end
 end

@@ -1,4 +1,4 @@
-class AdminController < ActionController::Base
+class AdminController < ApplicationController
   layout 'admin'
   include Pundit::Authorization
   include PunditUnauthorizedPathHelper
@@ -12,6 +12,6 @@ class AdminController < ActionController::Base
   def user_not_authorized(exception)
     policy_name = exception.policy.class.to_s.underscore
     flash[:alert] = t "#{policy_name}.#{exception.query}", scope: 'pundit', default: :default
-    redirect_to(unauthorized_redirect_path(policy_name, exception.query) || request.referrer || admin_root_path)
+    redirect_to(unauthorized_redirect_path(policy_name, exception.query) || request.referer || admin_root_path)
   end
 end

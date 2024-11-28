@@ -71,6 +71,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 4.0', '>= 4.0.1'
   gem 'rubocop', require: false
   gem 'rubocop-performance', '~> 1.0'
+  gem 'rubocop-rails', '~> 2.27'
   gem 'rubocop-rspec'
   gem 'ruby-debug-ide'
 end
